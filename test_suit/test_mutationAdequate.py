@@ -22,6 +22,13 @@ class mutationAdequateTest(unittest.TestCase):
         self.assertEqual(Triangle.classify(3, 1, 1), Triangle.Type.INVALID)
         self.assertEqual(Triangle.classify(1, 3, 1), Triangle.Type.INVALID)
         self.assertEqual(Triangle.classify(1, 1, 3), Triangle.Type.INVALID)
+        
+        self.assertEqual(Triangle.classify(1, 2, 3), Triangle.Type.INVALID)
+        self.assertEqual(Triangle.classify(1, 3, 2), Triangle.Type.INVALID)
+        self.assertEqual(Triangle.classify(3, 1, 2), Triangle.Type.INVALID)
+        self.assertEqual(Triangle.classify(3, 2, 1), Triangle.Type.INVALID)
+        self.assertEqual(Triangle.classify(2, 1, 3), Triangle.Type.INVALID)
+        self.assertEqual(Triangle.classify(2, 3, 1), Triangle.Type.INVALID)
 
     def test_scalene(self):
         # Test scalene triangle
@@ -43,9 +50,6 @@ class mutationAdequateTest(unittest.TestCase):
         self.assertEqual(Triangle.classify(3, 3, 1), Triangle.Type.ISOSCELES)
         self.assertEqual(Triangle.classify(3, 1, 3), Triangle.Type.ISOSCELES)
         self.assertEqual(Triangle.classify(1, 3, 3), Triangle.Type.ISOSCELES)
-        
-
 
 if __name__ == '__main__':
     unittest.main()
-
