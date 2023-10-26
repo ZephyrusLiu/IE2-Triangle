@@ -14,8 +14,8 @@ class StatementCoverageTest(unittest.TestCase):
 
     def test_scalene(self):
         # Test scalene triangle
-        self.assertEqual(Triangle.classify(1, 2, 3), Triangle.Type.SCALENE)
-        self.assertEqual(Triangle.classify(4, 5, 6), Triangle.Type.SCALENE)
+        self.assertEqual(Triangle.classify(2, 3, 4), Triangle.Type.SCALENE)
+        self.assertEqual(Triangle.classify(5, 6, 7), Triangle.Type.SCALENE)
 
     def test_equilateral(self):
         # Test equilateral triangle
